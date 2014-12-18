@@ -1,22 +1,34 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Recette {
-    
+/**
+ *
+ * @author guillaume
+ */
+public class Recette implements Serializable{
     private int idRecette;
     private String nomRecette;
     private int tempsPreparation;
-    private int tenpsCuisson;
-    private int niveauDifficulte;
+    private int tempsCuisson;
+    private int niveauDifficulté;
     private Type leType;
-    private ArrayList<Aliment> lesAliments = new ArrayList<Aliment>();
+    private ArrayList<Aliment> lesAliments;
 
-    public Recette(int idRecette, String nomRecette, int tempsPreparation, int tenpsCuisson, int niveauDifficulte, Type leType) {
+    public Recette(int idRecette, String nomRecette, int tempsPreparation, int tempsCuisson, int niveauDifficulté, Type leType, ArrayList<Aliment> lesAliments) {
         this.idRecette = idRecette;
         this.nomRecette = nomRecette;
         this.tempsPreparation = tempsPreparation;
-        this.tenpsCuisson = tenpsCuisson;
-        this.niveauDifficulte = niveauDifficulte;
+        this.tempsCuisson = tempsCuisson;
+        this.niveauDifficulté = niveauDifficulté;
         this.leType = leType;
+        this.lesAliments = lesAliments;
     }
 
     public int getIdRecette() {
@@ -43,20 +55,20 @@ public class Recette {
         this.tempsPreparation = tempsPreparation;
     }
 
-    public int getTenpsCuisson() {
-        return tenpsCuisson;
+    public int getTempsCuisson() {
+        return tempsCuisson;
     }
 
-    public void setTenpsCuisson(int tenpsCuisson) {
-        this.tenpsCuisson = tenpsCuisson;
+    public void setTempsCuisson(int tempsCuisson) {
+        this.tempsCuisson = tempsCuisson;
     }
 
-    public int getNiveauDifficulte() {
-        return niveauDifficulte;
+    public int getNiveauDifficulté() {
+        return niveauDifficulté;
     }
 
-    public void setNiveauDifficulte(int niveauDifficulte) {
-        this.niveauDifficulte = niveauDifficulte;
+    public void setNiveauDifficulté(int niveauDifficulté) {
+        this.niveauDifficulté = niveauDifficulté;
     }
 
     public Type getLeType() {
@@ -74,12 +86,14 @@ public class Recette {
     public void setLesAliments(ArrayList<Aliment> lesAliments) {
         this.lesAliments = lesAliments;
     }
-
-    @Override
+    
     public String toString() {
-        return "Recette{" + "idRecette=" + idRecette + ", nomRecette=" + nomRecette + ", tempsPreparation=" + tempsPreparation + ", tenpsCuisson=" + tenpsCuisson + ", niveauDifficulte=" + niveauDifficulte + ", leType=" + leType + ", lesAliments=" + lesAliments + '}';
+        return "==> Recette n°"+this.idRecette+"\n"
+                + "Nom de la recette : "+this.nomRecette+"\n"
+                + "Temps de préparation : "+this.tempsPreparation+"min\n"
+                + "Temps de cuisson : "+this.tempsCuisson+"min\n"
+                + "Niveau de difficulté : "+this.niveauDifficulté+"/10\n\n";
     }
-
     
     
 }

@@ -3,16 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+
+import java.io.Serializable;
+
 /**
  *
- * @author fruitet
+ * @author guillaume
  */
-public class Poisson extends Aliment {
+public class Poisson extends Aliment implements Serializable{
 
-    public Poisson(int idAliment, String nomAliment, int calories) {
+    public Poisson(int idAliment, String nomAliment, double calories) {
         super(idAliment, nomAliment, calories);
     }
-    
-    
     
 }

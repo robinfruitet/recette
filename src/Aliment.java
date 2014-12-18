@@ -3,17 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+
+import java.io.Serializable;
+
 /**
  *
- * @author fruitet
+ * @author guillaume
  */
-public class Aliment {
-    
+public class Aliment implements Serializable{
     private int idAliment;
     private String nomAliment;
-    private int calories;
+    private double calories;
 
-    public Aliment(int idAliment, String nomAliment, int calories) {
+    public Aliment(int idAliment, String nomAliment, double calories) {
         this.idAliment = idAliment;
         this.nomAliment = nomAliment;
         this.calories = calories;
@@ -35,19 +38,17 @@ public class Aliment {
         this.nomAliment = nomAliment;
     }
 
-    public int getCalories() {
+    public double getCalories() {
         return calories;
     }
 
-    public void setCalories(int calories) {
+    public void setCalories(double calories) {
         this.calories = calories;
     }
-
-    @Override
+    
     public String toString() {
-        return "Aliment{" + "idAliment=" + idAliment + ", nomAliment=" + nomAliment + ", calories=" + calories + '}';
+        return "==>Aliment n°"+this.idAliment+"\n"
+                + "Nom de l'aliment : "+this.nomAliment+"\n"
+                + "Calories de l'aliment : "+this.calories+"\n\n";
     }
-    
-    
-    
 }

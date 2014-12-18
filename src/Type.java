@@ -3,18 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+
+import java.io.Serializable;
+
 /**
  *
- * @author fruitet
+ * @author guillaume
  */
-public class Type {
-    
+public class Type implements Serializable{
     private int idType;
-    private String idLibelle;
+    private String libelleType;
 
-    public Type(int idType, String idLibelle) {
+    public Type(int idType, String libelleType) {
         this.idType = idType;
-        this.idLibelle = idLibelle;
+        this.libelleType = libelleType;
     }
 
     public int getIdType() {
@@ -25,14 +28,12 @@ public class Type {
         this.idType = idType;
     }
 
-    public String getIdLibelle() {
-        return idLibelle;
+    public String getLibelleType() {
+        return libelleType;
     }
 
-    public void setIdLibelle(String idLibelle) {
-        this.idLibelle = idLibelle;
+    public void setLibelleType(String libelleType) {
+        this.libelleType = libelleType;
     }
-    
-    
     
 }

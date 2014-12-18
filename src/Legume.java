@@ -3,13 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+
+import java.io.Serializable;
+
 /**
  *
- * @author fruitet
+ * @author guillaume
  */
-public class Legume extends Aliment {
+public class Legume extends Aliment implements Serializable{
 
-    public Legume(int idAliment, String nomAliment, int calories) {
+    public Legume(int idAliment, String nomAliment, double calories) {
         super(idAliment, nomAliment, calories);
     }
     

@@ -109,18 +109,22 @@ public class MainRecette {
                             case 2:
                                 System.out.println("Entrer l'id de la recette");
                                 int idR = sc.nextInt();
+                                sc.nextLine();
                                 System.out.println("Entrer le nom de la recette");
-                                String nomR = sc.next();
+                                String nomR = sc.nextLine();
                                 System.out.println("Entrer le temps de préparation");
                                 int tpR = sc.nextInt();
+                                sc.nextLine();
                                 System.out.println("Entrer le temps de cuisson");
                                 int tcR = sc.nextInt();
+                                sc.nextLine();
                                 System.out.println("Entrer le niveau de difficulté ( de 1 à 10)");
                                 int ndR = sc.nextInt();
+                                sc.nextLine();
                                 System.out.println("Entrer le nom de la recette");
-                                String typeR = sc.next();
+                                String typeR = sc.nextLine();
                                 System.out.println("Entrer le nom de la recette");
-                                String alimentsR = sc.next();
+                                String alimentsR = sc.nextLine();
                                 Recette laRecetteTemp = new Recette(idR,nomR,tpR,tcR,ndR,typeR,alimentsR);
                                 lesRecettes.add(laRecetteTemp);
                                 break;
